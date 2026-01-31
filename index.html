@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our February Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Background Effects -->
+    <div class="bg-particles" id="particles"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://res.cloudinary.com/demo/video/upload/v1687297380/romantic_music_placeholder.mp3" type="audio/mpeg"> 
+        <!-- Placeholder music, user can replace if needed. Using a generic one or user's local if provided later. 
+             Ideally we'd want a local file, but for now I'll use a placeholder or assume user will add one to /images or audio folder -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="music-control" class="music-btn hidden" aria-label="Toggle Music">
+        🎵
+    </button>
+
+    <!-- Password Gate -->
+    <div id="password-gate" class="gate-overlay">
+        <div class="gate-content">
+            <h1>Only for the two hearts in this story</h1>
+            <input type="password" id="password-input" placeholder="Enter password..." autocomplete="off">
+            <p id="error-msg" class="hidden">Try again, my love.</p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <main id="main-content" class="hidden">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="fade-in">This Month is Our Story</h1>
+            <p class="subtitle fade-in delay-1">"Not a schedule. Not a plan. Just moments waiting to happen."</p>
+            
+            <div class="hero-image-frame fade-in delay-2">
+                <!-- Using one of the provided images. Randomly picking one or the first one. -->
+                <img src="images/photo_6226728214789295242_y.jpg" alt="Us" class="hero-img">
+            </div>
+
+            <button id="start-journey-btn" class="btn-glow fade-in delay-3">Begin Our Journey</button>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="timeline-section">
+            <div class="timeline-line"></div>
+            <!-- Dynamic content will be injected here by script.js -->
+        </section>
+
+    </main>
+
+    <!-- Cloudinary Widget Script -->
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+</html>
